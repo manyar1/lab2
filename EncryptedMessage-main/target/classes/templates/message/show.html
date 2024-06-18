@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+</head>
+<body>
+<p th:text="${'Message: ' + message.getText()}">VALUE</p>
+
+<form th:action="@{{id}/cipher(id=${message.getId()})}">
+    <input type="submit" value="Зашифровать и подписать"/>
+</form>
+<br/>
+</body>
+</html>
